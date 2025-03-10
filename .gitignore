@@ -10,6 +10,8 @@ env/
 dist/
 build/
 __pycache__/
+.python-version
+
 
 # Umgebungsvariablen & sensible Dateien
 .env
