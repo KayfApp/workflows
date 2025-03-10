@@ -1,0 +1,15 @@
+# HTTP Requests
+requests==2.31.0
+
+# OpenAI API
+openai==1.14.3
+
+# Scheduler (Cron-Jobs)
+APScheduler==3.10.4
+
+# E-Mail-Versand
+smtplib==0.1.0  # smtplib ist standard (möglicherweise nicht nötig)
+email-validator==2.1.1
+
+# Hilfsbibliotheken (optional)
+python-dotenv==1.0.1  # Laden von .env-Dateien
