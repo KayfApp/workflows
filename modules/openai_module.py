@@ -3,11 +3,11 @@ from credentials import OpenAICredentials
 
 class OpenAIModule:
     def __init__(self, credentials: OpenAICredentials):
-        self.client = OpenAI(api_key=credentials.api_key)
+        self.client = OpenAI(api_key=credentials.api_key)  # Korrekte Initialisierung
 
-    def generate_text(self, prompt: str, model: str = "gpt-3.5-turbo", **kwargs):
+    def generate_text(self, prompt: str, model: str = "gpt-4o-mini", **kwargs):
         try:
-            response = self.client.chat.completions.create(
+            response = self.client.chat.completions.create(  # Neuer API-Aufruf
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 **kwargs
