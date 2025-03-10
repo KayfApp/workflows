@@ -1,0 +1,56 @@
+# Python spezifisch
+__pycache__/
+*.pyc
+*.pyo
+*.pyo
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+__pycache__/
+
+# Umgebungsvariablen & sensible Dateien
+.env
+.env.*
+
+# Node.js (n8n spezifisch)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-error.log*
+
+# Docker spezifisch
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Datenbanken (SQLite von n8n)
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.n8n/
+
+# Logdateien
+*.log
+logs/
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Python spezifisch
+*.pyc
+*.pyo
+__pycache__/
+venv/
+*.venv
+
+# IDEs und Editoren
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# temporäre Dateien
+*.tmp
