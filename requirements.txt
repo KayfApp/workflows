@@ -2,14 +2,13 @@
 requests==2.31.0
 
 # OpenAI API
-openai==1.3.8
+openai>=1.3.8
 
 # Scheduler (Cron-Jobs)
 APScheduler==3.10.4
 
 # E-Mail-Versand
-# smtplib==0.1.0  # smtplib ist standard (möglicherweise nicht nötig)
 email-validator==2.1.1
 
-# Hilfsbibliotheken (optional)
+# Hilfsbibliotheken
 python-dotenv==1.0.1  # Laden von .env-Dateien
