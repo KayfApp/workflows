@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from credentials import SlackCredentials, TeamsCredentials, EmailCredentials, OpenAICredentials
+from credentials import SlackCredentials, EmailCredentials, OpenAICredentials #TeamsCredentials, 
 from facade import WorkflowFacade
 import time
 
@@ -10,7 +10,7 @@ def main():
 
     # Credentials aus .env laden
     slack_creds = SlackCredentials(webhook_url=os.getenv("SLACK_WEBHOOK_URL"))
-    teams_creds = TeamsCredentials(webhook_url=os.getenv("TEAMS_WEBHOOK_URL"))
+    #teams_creds = TeamsCredentials(webhook_url=os.getenv("TEAMS_WEBHOOK_URL"))
     email_creds = EmailCredentials(
         smtp_server=os.getenv("EMAIL_SMTP_SERVER"),
         smtp_port=int(os.getenv("EMAIL_SMTP_PORT")),
@@ -22,7 +22,7 @@ def main():
     # Workflow-Fassade erstellen
     workflow = WorkflowFacade(
         slack_credentials=slack_creds,
-        teams_credentials=teams_creds,
+        #teams_credentials=teams_creds,
         email_credentials=email_creds,
         openai_credentials=openai_creds
     )
@@ -32,8 +32,8 @@ def main():
     print("Slack-Antwort:", slack_creds)
 
     # Teste Teams-Nachricht
-    teams_success = workflow.send_teams("Teams-Nachricht via WorkflowFacade ✅", title="Testnachricht")
-    print("Teams erfolgreich:", teams_success)
+    #teams_success = workflow.send_teams("Teams-Nachricht via WorkflowFacade ✅", title="Testnachricht")
+    #print("Teams erfolgreich:", teams_success)
 
     prompt="Was ist modularer Code?"
     # OpenAI testen
