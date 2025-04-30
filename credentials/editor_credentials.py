@@ -2,4 +2,5 @@ from dataclasses import dataclass
 
 @dataclass
 class EditorCredentials:
-    api_token: str
+    base_url: str  # e.g. "http://localhost:3000/api/editor"
+
